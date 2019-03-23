@@ -2,9 +2,9 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const RenderLeader = ({ leader }) => {
+const RenderLeader = ({ leader}) => {
   return(
-    <Media>
+    <Media >
       <Media left >
         <Media object src={ leader.image } alt="leader" />
       </Media>
@@ -21,9 +21,9 @@ const RenderLeader = ({ leader }) => {
 
 const About = (props) => {
 
-    const leaders = props.leaders.map((leader) => {
+    const leaders = props.leaders.map((leader, index) => {
         return (
-            <RenderLeader leader={ leader }/>
+            <RenderLeader key={index} leader={ leader }/>
         );
     });
 

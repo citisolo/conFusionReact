@@ -19,7 +19,7 @@ const RenderDish = ({dish}) => {
 }
 
 const RenderComments = ({comments}) => {
-
+  //console.log(`comments = ${comments}`);
   if(comments == null){
     return (<div></div>);
   }
@@ -43,11 +43,7 @@ const RenderComments = ({comments}) => {
 
 const DishDetail = (props) => {
   let dish = props.dish;
-  let comments = null;
-  if (dish != null){
-    comments = dish.comments;
-  }
-
+  let comments = props.comments;
   return (
     <div className="container">
       <div className="row">
@@ -58,7 +54,7 @@ const DishDetail = (props) => {
           <div className="col-12">
               <h3>{props.dish.name}</h3>
               <hr />
-          </div>                
+          </div>
       </div>
       <div className="row">
         <div className="col-12 col-md-5 m-1">
