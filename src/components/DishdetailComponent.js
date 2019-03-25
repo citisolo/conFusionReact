@@ -34,7 +34,7 @@ class CommentForm extends React.Component {
     const vals = JSON.stringify(values);
     console.log(vals);
 
-    this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
+    this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
     this.toggleModal();
   }
 
@@ -135,7 +135,7 @@ const RenderDish = ({dish}) => {
   )
 }
 
-const RenderComments = ({dishId, addComment, comments}) => {
+const RenderComments = ({dishId, postComment, comments}) => {
   //console.log(`comments = ${comments}`);
   if(comments == null){
     return (<div></div>);
@@ -154,7 +154,7 @@ const RenderComments = ({dishId, addComment, comments}) => {
     <div>
       <h4> Comments </h4>
       {commentList}
-      <CommentForm dishId={dishId} addComment={addComment}/>
+      <CommentForm dishId={dishId} postComment={postComment}/>
     </div>
   )
  }
@@ -198,7 +198,7 @@ const DishDetail = (props) => {
               <RenderDish dish={props.dish}/>
             </div>
             <div className="col-12 col-md-5 m-1">
-              <RenderComments comments={props.comments} addComment={props.addComment} dishId={props.dish.id}/>
+              <RenderComments comments={props.comments} postComment={props.postComment} dishId={props.dish.id}/>
             </div>
           </div>
         </div>
