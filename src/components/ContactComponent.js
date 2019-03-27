@@ -37,9 +37,10 @@ class Contact extends Component {
 
   handleSubmit(values){
     console.log('Current state is: ' + JSON.stringify(values));
-    alert('Current state is: ' + JSON.stringify(values));
+    alert('Thank you for your feedback : ' + JSON.stringify(values));
+    this.props.postFeedBack(values);
     this.props.resetFeedBackForm();
-
+    window.open("http://localhost:3001/feedback","_blank")
     //event.preventDefault();
   }
 

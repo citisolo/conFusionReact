@@ -10,7 +10,9 @@ const RenderCard = ({item, isLoading, errMess}) => {
 
   if (isLoading) {
       return(
+        <div className="row row-content">
               <Loading />
+        </div>
       );
   }
   else if (errMess) {
@@ -18,24 +20,28 @@ const RenderCard = ({item, isLoading, errMess}) => {
               <h4>{errMess}</h4>
       );
   }
-  else
-      return(
-          <FadeTransform in transformProps={{exitTransform:'scale(0.5) translateY(-50%)'}}>
-            <Card>
-                <CardImg src={baseUrl + item.image} alt={item.name} />
-                <CardBody>
-                <CardTitle>{item.name}</CardTitle>
-                {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }
-                <CardText>{item.description}</CardText>
-                </CardBody>
-            </Card>
-          </FadeTransform>
+  else{
+    return(
+        <FadeTransform in transformProps={{exitTransform:'scale(0.5) translateY(-50%)'}}>
+          <Card>
+              <CardImg src={baseUrl + item.image} alt={item.name} />
+              <CardBody>
+              <CardTitle>{item.name}</CardTitle>
+              {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }
+              <CardText>{item.description}</CardText>
+              </CardBody>
+          </Card>
+        </FadeTransform>
 
-      );
+    );
+
+  }
+
 
 }
 
 function Home(props) {
+    console.log(props)
     return(
         <div className="container">
             <div className="row align-items-start">
@@ -46,7 +52,7 @@ function Home(props) {
                     <RenderCard item={props.promotion } isLoading={props.promoLoading} errMess={props.promoErrMess} />
                 </div>
                 <div className="col-12 col-md m-1">
-                    <RenderCard item={props.leader} isLoading={props.dishesLoading} errMess={props.dishesErrMess} />
+                    <RenderCard item={props.leader} isLoading={props.leadersLoading} errMess={props.leadersErrMess} />
                 </div>
             </div>
         </div>

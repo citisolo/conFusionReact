@@ -201,14 +201,6 @@
       "comment": "It's your birthday, we're gonna party!",
       "author": "25 Cent",
       "date": "2011-12-02T17:57:28.556094Z"
-    },
-    {
-      "dishId": 0,
-      "rating": "5",
-      "author": "serewc",
-      "comment": "we",
-      "date": "2019-03-25T15:32:05.074Z",
-      "id": 20
     }
   ],
   "promotions": [
@@ -271,6 +263,66 @@
       "message": "afadsfds",
       "date": "2017-12-04T09:41:49.890Z",
       "id": 1
+    },
+    {
+      "firstname": "kewadw",
+      "lastname": "arec",
+      "telnum": "334134134",
+      "email": "citisolo@gmail.com",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "aerwaeracasd",
+      "id": 2
+    },
+    {
+      "firstname": "kwawo",
+      "lastname": "aserq",
+      "telnum": "324123",
+      "email": "citisolo@gmail.com",
+      "agree": true,
+      "contactType": "Tel.",
+      "message": "caserwe",
+      "id": 3
+    },
+    {
+      "firstname": "jojo",
+      "lastname": "amankwa",
+      "telnum": "1234445",
+      "email": "citisolo@gmail.com",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "ascwef",
+      "id": 4
+    },
+    {
+      "firstname": "jojo",
+      "lastname": "siwa",
+      "telnum": "32423",
+      "email": "citisolo@gmail.com",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "asdfawe",
+      "id": 5
+    },
+    {
+      "firstname": "Jojo",
+      "lastname": "jackson",
+      "telnum": "2341341",
+      "email": "citisolo@gmail.com",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "asdfew",
+      "id": 6
+    },
+    {
+      "firstname": "23423423",
+      "lastname": "dfasdfas",
+      "telnum": "32323",
+      "email": "citisolo@gmail.com",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "sdfasdfw",
+      "id": 7
     }
   ]
 }
